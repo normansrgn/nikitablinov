@@ -1,15 +1,15 @@
-import * as Icons from 'lucide-react'
-import PageHero from '../components/ui/PageHero'
-import SectionHeading from '../components/ui/SectionHeading'
-import ScrollReveal from '../components/ui/ScrollReveal'
-import AnimatedCounter from '../components/ui/AnimatedCounter'
-import CTABanner from '../components/ui/CTABanner'
-import { timeline, achievements, gallery } from '../data/about'
-import { aboutStats } from '../data/stats'
+import * as Icons from "lucide-react";
+import PageHero from "../components/ui/PageHero";
+import SectionHeading from "../components/ui/SectionHeading";
+import ScrollReveal from "../components/ui/ScrollReveal";
+import AnimatedCounter from "../components/ui/AnimatedCounter";
+import CTABanner from "../components/ui/CTABanner";
+import { timeline, achievements, gallery } from "../data/about";
+import { aboutStats } from "../data/stats";
 
 function Icon({ name, className }) {
-  const LucideIcon = Icons[name]
-  return LucideIcon ? <LucideIcon className={className} /> : null
+  const LucideIcon = Icons[name];
+  return LucideIcon ? <LucideIcon className={className} /> : null;
 }
 
 export default function About() {
@@ -38,32 +38,42 @@ export default function About() {
                 Как всё <span className="gradient-text">начиналось</span>
               </h2>
               <p className="mt-4 text-white/60 leading-relaxed">
-                Федерация кикбоксинга г. Краснодар была основана группой энтузастов-единоборцев, которые мечтали
-                сделать кикбоксинг доступным для каждого жителя города. Первый зал на ул. Красной принял 40
-                спортсменов — сегодня это более 850 атлетов в 28 клубах-партнёрах.
+                Федерация кикбоксинга г. Краснодар была основана группой
+                энтузастов-единоборцев, которые мечтали сделать кикбоксинг
+                доступным для каждого жителя города. Первый зал на ул. Красной
+                принял 40 спортсменов — сегодня это более 850 атлетов в 28
+                клубах-партнёрах.
               </p>
               <p className="mt-4 text-white/60 leading-relaxed">
-                Мы — официальный член Федерации кикбоксинга России, работаем по стандартам WAKO и готовим чемпионов
-                края, юга и страны.
+                Мы — официальный член Федерации кикбоксинга России, работаем по
+                стандартам WAKO и готовим чемпионов края, юга и страны.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className="glass-card rounded-3xl p-8">
-                <h3 id="mission" className="text-xl font-bold text-white">Наша миссия</h3>
+                <h3 id="mission" className="text-xl font-bold text-white">
+                  Наша миссия
+                </h3>
                 <p className="mt-4 text-white/60 leading-relaxed">
-                  Воспитывать сильных, дисциплинированных и честных спортсменов. Дать каждому ребёнку и взрослому
-                  возможность раскрыть потенциал через единоборства — в безопасной, профессиональной и вдохновляющей
-                  среде.
+                  Воспитывать сильных, дисциплинированных и честных спортсменов.
+                  Дать каждому ребёнку и взрослому возможность раскрыть
+                  потенциал через единоборства — в безопасной, профессиональной
+                  и вдохновляющей среде.
                 </p>
                 <ul className="mt-6 space-y-3">
-                  {['Честная игра и уважение к сопернику', 'Безопасность на каждой тренировке', 'Доступность спорта для всех'].map(
-                    (item) => (
-                      <li key={item} className="flex items-center gap-2 text-sm text-white/70">
-                        <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-                        {item}
-                      </li>
-                    ),
-                  )}
+                  {[
+                    "Честная игра и уважение к сопернику",
+                    "Безопасность на каждой тренировке",
+                    "Доступность спорта для всех",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-center gap-2 text-sm text-white/70"
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </ScrollReveal>
@@ -96,11 +106,23 @@ export default function About() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 60}>
-                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-red-900/30 to-orange-900/20 card-hover">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 card-hover">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-orange-400">{item.tag}</span>
-                    <p className="mt-1 font-semibold text-white">{item.title}</p>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-orange-400">
+                      {item.tag}
+                    </span>
+
+                    <p className="mt-1 font-semibold text-white">
+                      {item.title}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -111,17 +133,31 @@ export default function About() {
 
       <section id="timeline" className="py-16 md:py-24 bg-[#101018]/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading badge="Хронология" title="Путь" highlight="федерации" />
+          <SectionHeading
+            badge="Хронология"
+            title="Путь"
+            highlight="федерации"
+          />
           <div className="relative">
             <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-red-500 via-orange-500 to-transparent md:left-1/2 md:-translate-x-px" />
             {timeline.map((item, i) => (
               <ScrollReveal key={item.year} delay={i * 80}>
-                <div className={`relative mb-10 flex flex-col md:flex-row ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                  <div className={`md:w-1/2 ${i % 2 === 0 ? 'md:pl-12 md:text-left' : 'md:pr-12 md:text-right md:ml-auto'}`}>
+                <div
+                  className={`relative mb-10 flex flex-col md:flex-row ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                >
+                  <div
+                    className={`md:w-1/2 ${i % 2 === 0 ? "md:pl-12 md:text-left" : "md:pr-12 md:text-right md:ml-auto"}`}
+                  >
                     <div className="glass-card rounded-2xl p-6 md:max-w-md md:ml-auto">
-                      <span className="gradient-text text-2xl font-extrabold">{item.year}</span>
-                      <h3 className="mt-2 text-lg font-bold text-white">{item.title}</h3>
-                      <p className="mt-2 text-sm text-white/55">{item.description}</p>
+                      <span className="gradient-text text-2xl font-extrabold">
+                        {item.year}
+                      </span>
+                      <h3 className="mt-2 text-lg font-bold text-white">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-white/55">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                   <div className="absolute left-4 flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-orange-500 md:left-1/2" />
@@ -149,5 +185,5 @@ export default function About() {
         showEmail={false}
       />
     </>
-  )
+  );
 }
