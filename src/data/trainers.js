@@ -1,16 +1,9 @@
-import trainer1 from '../img/traners/trainer1.png'
-import trainer2 from '../img/traners/trainer2.png'
-import trainer3 from '../img/traners/trainer3.png'
-import trainer4 from '../img/traners/trainer4.png'
-import trainer5 from '../img/traners/trainer5.png'
-import trainer6 from '../img/traners/trainer6.png'
 export const trainerCategories = ['Все', 'Кикбоксинг', 'К-1', 'Детская группа', 'Самбо']
 
 export const trainers = [
   {
     id: 1,
     name: 'Алексей Морозов',
-    image: trainer1,
     initials: 'АМ',
     role: 'Главный тренер',
     category: 'Кикбоксинг',
@@ -22,7 +15,6 @@ export const trainers = [
   {
     id: 2,
     name: 'Дмитрий Волков',
-    image: trainer2,
     initials: 'ДВ',
     role: 'Тренер К-1',
     category: 'К-1',
@@ -34,7 +26,6 @@ export const trainers = [
   {
     id: 3,
     name: 'Елена Соколова',
-    image: trainer3,
     initials: 'ЕС',
     role: 'Тренер детских групп',
     category: 'Детская группа',
@@ -46,7 +37,6 @@ export const trainers = [
   {
     id: 4,
     name: 'Игорь Кузнецов',
-    image: trainer4,
     initials: 'ИК',
     role: 'Тренер по самбо',
     category: 'Самбо',
@@ -58,7 +48,6 @@ export const trainers = [
   {
     id: 5,
     name: 'Марина Петрова',
-    image: trainer5,
     initials: 'МП',
     role: 'Тренер женской группы',
     category: 'Кикбоксинг',
@@ -70,7 +59,6 @@ export const trainers = [
   {
     id: 6,
     name: 'Сергей Орлов',
-    image: trainer6,
     initials: 'СО',
     role: 'Тренер молодёжной сборной',
     category: 'К-1',

@@ -12,7 +12,7 @@ const emptyForm = { name: '', phone: '', email: '', message: '' }
 
 export default function Contacts() {
   const [form, setForm] = useState(emptyForm)
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [status, setStatus] = useState('idle') // idle | loading 
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleSubmit = async (e) => {
@@ -168,7 +168,7 @@ export default function Contacts() {
               <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                 <MapPin className="h-12 w-12 text-orange-400" />
                 <p className="mt-4 text-xl font-bold text-white">г. Краснодар, ул. Красная, 120</p>
-                <p className="mt-2 text-white/50">Спорткомплекс «ФК Арена» — 5 минут от центра</p>
+                <p className="mt-2 text-white/50">Спорткомплекс «ФКК Арена» — 5 минут от центра</p>
                 <a
                   href="https://yandex.ru/maps"
                   target="_blank"

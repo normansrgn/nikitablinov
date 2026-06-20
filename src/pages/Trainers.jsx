@@ -47,13 +47,8 @@ export default function Trainers() {
             {filtered.map((trainer, i) => (
               <ScrollReveal key={trainer.id} delay={i * 80}>
                 <article className="glass-card card-hover overflow-hidden rounded-2xl">
-                  <div className="relative h-56 overflow-hidden">
-                    <img
-                      src={trainer.image}
-                      alt={trainer.name}
-                      className="has-autofill: w-full object-cover transition duration-500 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className={`flex h-32 items-center justify-center bg-gradient-to-br ${trainer.color}`}>
+                    <span className="text-4xl font-extrabold text-white/90">{trainer.initials}</span>
                   </div>
                   <div className="p-6">
                     <p className="text-xs font-semibold uppercase tracking-wider text-orange-400">{trainer.role}</p>
